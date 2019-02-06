@@ -8,5 +8,5 @@
   <link rel="stylesheet" href="css/loja.css">
 </head>
 <body>
-<?php include "menu.php"; ?>
+<?php require_once("menu.php"); ?>
 <div class="container">

@@ -1,6 +1,6 @@
-<?php include "cabecalho.php";
+<?php require_once("cabecalho.php");
 			require_once("banco-categoria.php");
-			$categorias = listaCategorias($conexao)
+			$categorias = listaCategorias($conexao);
 ?>
   <div class="principal">
   	<h1>Formulário de cadastro</h1>
@@ -20,18 +20,21 @@
 	  </div>
 	  <div class="form-group">
 		    <div class="checkbox">
-            <label><input type="checkbox" value="true" name="usado" id="usado">Usado</label>
+            <label><input type="checkbox" name="usado" value="true" id="usado">Usado</label>
 	      </div>
 		</div>
 	  <div class="form-group">
 		  <label for="categoria_id">Categoria:</label>
 			<select id="categoria_id" name="categoria_id"  class="form-control">
-					<?php foreach($categorias as $categoria) : ?>
-					<option value="<?=$categoria['id']?>"><?=$categoria['nome']?></option>
-					<?php endforeach ?>
+			<?php 
+				foreach($categorias as $categoria) : 
+				?>
+				<option value="<?=$categoria['id']?>">
+								<?=$categoria['nome']?>
+				</option>
+				<?php endforeach ?>
 			</select>		
 	  </div>
-		
-	  <button type="submit" class="btn btn-default">Cadastrar</button>
+		<button type="submit" class="btn btn-default">Cadastrar</button>
 	</form>  
 <?php include "rodape.php"; ?>
