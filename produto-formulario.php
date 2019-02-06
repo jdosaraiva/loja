@@ -37,4 +37,4 @@
 	  </div>
 		<button type="submit" class="btn btn-default">Cadastrar</button>
 	</form>  
-<?php include "rodape.php"; ?>
+<?php require_once("rodape.php"); ?>
