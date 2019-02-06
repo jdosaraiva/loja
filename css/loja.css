@@ -1,0 +1,14 @@
+.principal {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #cccccc;
+    color: rgb(46, 42, 61);
+    text-align: center;
+}
